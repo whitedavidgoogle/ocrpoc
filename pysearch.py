@@ -14,6 +14,7 @@ for root,dirs, files in os.walk(r'.'):
 
 while a < len(dirarray):
         print dirarray[a]
+	print dslistbool[a]
         a=a+1
 #populate bool array
 while i < len(dirarray):
