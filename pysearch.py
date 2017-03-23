@@ -8,22 +8,21 @@ posresult = "true"
 import os
 #Loops
 #populate dirarray
-for root,dirs, files in os.walk(r'./data/'):
+for root,dirs, files in os.walk(r'ocrpoc/data/'):
     for file in files:
         if file.endswith('.txt'):
             dirarray.append(file)
 
-while a < len(dslistbool):
+while a < len(dirarray):
         print dirarray[a]
-	#print dslistbool[a]
-        a=a+1
+#	print dslistbool[a]
+	a=a+1
 #populate bool array
 while i < len(dirarray):
-
-        searchfile = open(dirarray[i])
+	searchfile = open(dirarray[i])
         for line in searchfile:
 		print i
-                if "HONORABLE" or "Honorable" in line: 
+               	if "HONORABLE" or "Honorable" in line: 
 			dslistbool.append(posresult)
 		i=i+1
         searchfile.close()
